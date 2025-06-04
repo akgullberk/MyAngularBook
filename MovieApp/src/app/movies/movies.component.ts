@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MovieComponent } from '../movie/movie.component';
+import { Movie } from '../movie';
 
 @Component({
   selector: 'app-movies',
@@ -8,5 +9,16 @@ import { MovieComponent } from '../movie/movie.component';
   styleUrl: './movies.component.css'
 })
 export class MoviesComponent {
+  title = "Movie List"
 
+  getTitle(){
+    return this.title
+  }
+
+  movie:Movie = {
+    id:1,
+    name: "Movie Name"
+  }
+
+  
 }
