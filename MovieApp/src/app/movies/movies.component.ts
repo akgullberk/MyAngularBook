@@ -8,27 +8,31 @@ import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-movies',
-  imports: [CommonModule,FormsModule,MovieDetailComponent],
+  imports: [CommonModule, FormsModule, MovieDetailComponent],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.css'
 })
 export class MoviesComponent {
   title = "Movie List"
-  movies:Movie[] | undefined;
-  selectedMovie : Movie | undefined;
+  movies: Movie[] | undefined;
+  selectedMovie: Movie | undefined;
 
-  constructor(private movieService:MovieService){}
+  constructor(private movieService: MovieService) { }
 
-  ngOnInit():void{
+  ngOnInit(): void {
     this.getMovies();
   }
 
-  onSelect(movie:Movie) : void{
+  onSelect(movie: Movie): void {
     this.selectedMovie = movie;
     console.log('Seçilen:', movie);
   }
 
-  getMovies():void{
-    this.movies = this.movieService.getMovies();
+  getMovies(): void {
+    this.movieService.getMovies()
+      .subscribe(movies => {
+        this.movies = movies;
+      }
+      );
   }
 }
