@@ -1,24 +1,17 @@
 import { Component } from '@angular/core';
 import { MovieComponent } from '../movie/movie.component';
-import { Movie } from '../movie';
+import { CommonModule } from '@angular/common';
+import { Movies } from '../movie.datasource';
 
 @Component({
   selector: 'app-movies',
-  imports: [MovieComponent],
+  imports: [CommonModule],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.css'
 })
 export class MoviesComponent {
   title = "Movie List"
-
-  getTitle(){
-    return this.title
-  }
-
-  movie:Movie = {
-    id:1,
-    name: "Movie Name"
-  }
+  movies= Movies;
 
   
 }

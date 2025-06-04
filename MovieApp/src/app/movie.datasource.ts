@@ -1,0 +1,7 @@
+import { Movie } from './movie';
+
+export const Movies: Movie[]=[
+    {id:1, name:"Movie1"},
+    {id:2, name:"Movie2"},
+    {id:3, name:"Movie3"}
+]
