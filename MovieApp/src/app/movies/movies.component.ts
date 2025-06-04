@@ -4,10 +4,11 @@ import { CommonModule } from '@angular/common';
 import { Movies } from '../movie.datasource';
 import { Movie } from '../movie';
 import { FormsModule } from '@angular/forms';
+import { MovieDetailComponent } from '../movie-detail/movie-detail.component';
 
 @Component({
   selector: 'app-movies',
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,MovieDetailComponent],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.css'
 })
