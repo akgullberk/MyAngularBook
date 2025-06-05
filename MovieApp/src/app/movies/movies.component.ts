@@ -5,10 +5,11 @@ import { Movie } from '../movie';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from '../movie-detail/movie-detail.component';
 import { MovieService } from '../services/movie.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-movies',
-  imports: [CommonModule, FormsModule, MovieDetailComponent],
+  imports: [CommonModule, FormsModule, MovieDetailComponent,RouterModule],
   templateUrl: './movies.component.html',
   styleUrl: './movies.component.css'
 })
