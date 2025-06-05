@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoggingService } from '../logging.service';
+import { LoggingService } from '../services/logging.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

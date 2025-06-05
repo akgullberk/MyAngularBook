@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { Movie } from '../movie';
 import { FormsModule } from '@angular/forms';
 import { MovieDetailComponent } from '../movie-detail/movie-detail.component';
-import { MovieService } from '../movie.service';
+import { MovieService } from '../services/movie.service';
 
 @Component({
   selector: 'app-movies',
