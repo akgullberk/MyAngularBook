@@ -33,4 +33,9 @@ export class MovieService {
     const httpOptions = { headers: new HttpHeaders({"content-type": "application/json"}) };
     return this.http.put(this.apiMoviesUrl, movie, httpOptions);
   }
-}
+  
+  add(movie:Movie): Observable<Movie>{
+    const httpOptions = { headers: new HttpHeaders({"content-type": "application/json"}) };
+    return this.http.post<Movie>(this.apiMoviesUrl, movie, httpOptions).pipe();
+  }
+  }

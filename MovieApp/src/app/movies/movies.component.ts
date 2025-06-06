@@ -36,4 +36,12 @@ export class MoviesComponent {
       }
       );
   }
+
+  add(name:String,imageUrl:String,description:String) : void{
+    this.movieService.add({
+      name:name,
+      description:description,
+      imageUrl:imageUrl
+    } as Movie).subscribe(movie => this.movies?.push(movie));
+  }
 }
