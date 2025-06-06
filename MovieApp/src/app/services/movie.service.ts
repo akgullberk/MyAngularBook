@@ -38,4 +38,9 @@ export class MovieService {
     const httpOptions = { headers: new HttpHeaders({"content-type": "application/json"}) };
     return this.http.post<Movie>(this.apiMoviesUrl, movie, httpOptions).pipe();
   }
+
+  delete(movie:Movie): Observable<Movie>{
+    const httpOptions = { headers: new HttpHeaders({"content-type": "application/json"}) };
+    return this.http.delete<Movie>(this.apiMoviesUrl+"/"+movie.id, httpOptions);
   }
+}
