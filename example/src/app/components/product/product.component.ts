@@ -1,16 +1,30 @@
 import { Component } from '@angular/core';
 import { ProductRepository } from '../../repositories/repository.model';
 import { Product } from '../../models/product.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
 
   model: ProductRepository = new ProductRepository();
+  disabled=false;
 
-  product: Product = this.model.getProductById(1)!;
+  getClasses(id:number): String{
+    let product = this.model.getProductById(id)!;
+    return (product.price! <=1000 ? "bg-info" : "bg-secondary") + " m-2 p-2 text-white";
+  }
+
+  getClassMap(id:number): Object{
+    let product = this.model.getProductById(id)!;
+    return {
+      "bg-info": product.price! <=1000,
+      "bg-secondary": product.price! > 1000,
+      "text-center text-white": product.name == "Samsung S6"
+    };
+  }
 }
