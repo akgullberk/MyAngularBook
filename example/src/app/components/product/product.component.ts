@@ -3,21 +3,16 @@ import { ProductRepository } from '../../repositories/repository.model';
 import { Product } from '../../models/product.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { SummaryPipe } from '../../summary.pipe';
 
 @Component({
   selector: 'app-product',
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule,SummaryPipe],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
 
-  model: ProductRepository = new ProductRepository();
-
-  email: string = 'berk@gmail.com';
-  
-  onKeyUp() {
-      console.log(this.email);
-  }
+  text="Lorem ipsum dolor sit, amet consectetur adipisicing"
 
 }
