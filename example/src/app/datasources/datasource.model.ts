@@ -10,7 +10,6 @@ export class SimpleDataSource{
             new Product(3,"Samsung S7","iyi telefon","3.jpg",3000),
             new Product(4,"Samsung S8","iyi telefon","4.jpg",4000),
             new Product(5,"Samsung S9","iyi telefon","5.jpg",5000)
-
         );
     }
 

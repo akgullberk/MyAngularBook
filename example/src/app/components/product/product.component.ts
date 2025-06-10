@@ -14,5 +14,7 @@ export class ProductComponent {
 
   model: ProductRepository = new ProductRepository();
 
+  productName: string | undefined = this.model.getProductsById(1)?.name;
+
 
 }
