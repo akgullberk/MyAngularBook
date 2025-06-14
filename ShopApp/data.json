@@ -1,0 +1,17 @@
+{
+  "products": [
+    { "id": 1, "name": "Samsung S5", "price": 1000, "imageUrl": "1.jpg", "description": "Samsung S5" },
+    { "id": 2, "name": "Samsung S6", "price": 2000, "imageUrl": "2.jpg", "description": "Samsung S6" },
+    { "id": 3, "name": "Samsung S7", "price": 3000, "imageUrl": "3.jpg", "description": "Samsung S7" },
+    { "id": 4, "name": "Samsung S8", "price": 4000, "imageUrl": "4.jpg", "description": "Samsung S8" },
+    { "id": 5, "name": "Samsung S9", "price": 5000, "imageUrl": "5.jpg", "description": "Samsung S9" },
+    { "id": 6, "name": "Samsung S10", "price": 6000, "imageUrl": "6.jpg", "description": "Samsung S10" },
+    { "id": 7, "name": "Samsung S11", "price": 7000, "imageUrl": "7.jpg", "description": "Samsung S11" }
+  ],
+  "categories": [
+    { "id": 1, "name": "Mobile" },
+    { "id": 2, "name": "Tablet" },
+    { "id": 3, "name": "Laptop" }
+  ],
+  "orders": []
+}
