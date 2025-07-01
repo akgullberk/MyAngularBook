@@ -5,10 +5,11 @@ import { Product } from '../model/product.model';
 import { Category } from '../model/category.model';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-shop',
-  imports: [],
+  imports: [NavbarComponent],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.css'
 })
